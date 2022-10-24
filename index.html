@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	
+	<script src="scripts/main.js" defer></script>
+	
+	<title>Etch a Sketch</title>
+</head>
+<body>
+	<header id="header"></header>
+	<main id="mainContainer">
+		<div class="controls">
+			<div class="colors">
+				Pen Color: <input id="col-pkr" type="color">
+			</div>
+			<div class="toggles">
+				<div class="grid-lines">
+					<label for="line">Grid Lines</label>
+					<label class="switch">
+						<input type="checkbox" name="line" id="grid-switch">
+						<span class="slider round"></span>
+					</label>
+				</div>
+				<div class="rainbow">
+					<label for="line">Rainbow</label>
+					<label class="switch">
+						<input type="checkbox" name="line" id="rainbow-switch">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="buttons">
+				<select name="dimensions" id="dimensions" value="4">
+					<option value="4" selected="selected">4x4</option>
+					<option value="8">8x8</option>
+					<option value="16">16x16</option>
+					<option value="32">32x32</option>
+				</select>
+				<button class="generate" onclick="generateGrid()">Generate</button>
+				<button class="generate" onclick="clearCanvas()">Clear</button>
+			</div>
+		</div>
+		<div class="grid"></div>
+	</main>
+	<footer id="footer"></footer>
+</body>
+</html>
